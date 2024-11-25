@@ -21,7 +21,7 @@ export default function Login() {
         if (user) {
             setCurrentUser(user);
         } else {
-            setText("Cringe");
+            setText("Wrong username or password.");
         }
     }
 
