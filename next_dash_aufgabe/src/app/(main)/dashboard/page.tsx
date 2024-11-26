@@ -7,8 +7,8 @@ export default function Dashboard() {
 
     return (
         <>
-            <div className="text-9xl">
-                <div>Herzlich Willkommen, {currentUser?.firstname} {currentUser?.lastname}.</div>
+            <div className="text-7xl m-16">
+                {currentUser ? (<div>Herzlich Willkommen, {currentUser?.firstname} {currentUser?.lastname}.</div>) : (<></>)}
             </div>
         </>
     );

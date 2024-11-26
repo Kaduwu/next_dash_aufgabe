@@ -16,7 +16,7 @@ export function LoginProvider({
     const [loading, setLoading] = useState(true);
 
     async function loadCookieData() {
-      const res = await fetch("../data/cookie", {
+      const res = await fetch("../data/cookie/", {
         method: "GET",
       });
 
@@ -25,14 +25,11 @@ export function LoginProvider({
       if (result.token) {
         const user : User = JSON.parse(result.token)
         setCurrentUser(user);
-        console.log("Current User: " + currentUser);
       } 
-      console.log(currentUser)
       setLoading(false);
     }
 
     if (loading) {
-      console.log("AAAA")
       loadCookieData();
     }
 

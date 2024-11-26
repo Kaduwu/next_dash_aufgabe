@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import { CurrentUserContext } from "./loginContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
+import { styleNav } from "../styles/styles";
 
-const style = "text-center p-2 text-2xl px-4 transition hover:bg-sky-500"
+const style = styleNav
 
 export function LoginButton() {
     const currentUser = useContext(CurrentUserContext)?.currentUser;

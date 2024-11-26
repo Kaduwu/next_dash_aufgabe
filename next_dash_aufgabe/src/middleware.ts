@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export function middleware(request: NextRequest) {
   // Check for the token in cookies
   const token = request.cookies.get('token')?.value;
-  console.log(token);
+
   // Redirect to login if token is not present for protected routes
   if (!token && request.nextUrl.pathname.startsWith('/dashboard')) {
     return NextResponse.redirect(new URL('/login', request.url));
