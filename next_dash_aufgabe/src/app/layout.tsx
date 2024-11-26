@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <LoginProvider>
           <Navigation />
-          <main className="mb-auto h-10">
+          <main className="mb-auto h-10 mt-100">
             {children}
           </main>
           <footer className="h-10 bg-blue-500 border text-center bg-sky-200">

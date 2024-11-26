@@ -6,6 +6,13 @@ export type MockUser = {
     pw: string;
 };
 
+export type User = {
+    id: number;
+    name: string;
+    firstname: string;
+    lastname: string;
+}
+
 const user1 : MockUser = {
     id: 1,
     username: "john",
